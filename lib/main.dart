@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:task_login_register/register_screen.dart';
+import 'package:task_login_register/screens/categories_screen.dart';
+import 'package:task_login_register/screens/category_product_screen.dart';
+import 'package:task_login_register/screens/register_screen.dart';
 
-import 'login_screen.dart';
+import 'screens/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,12 +29,14 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
       ),
-      home: const LoginScreen(),
+      home: LoginScreen(),
       routes: {
         RegisterScreen.routeName: (context) => RegisterScreen(),
         LoginScreen.routeName: (context) => LoginScreen(),
+        CategoryProductsScreen.routeName: (context) => CategoryProductsScreen(),
+        CategoriesScreen.routeName: (context) => CategoriesScreen(),
       },
     );
   }
